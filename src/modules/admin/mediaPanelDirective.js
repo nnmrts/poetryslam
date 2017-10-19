@@ -3,7 +3,7 @@
     angular.module('psadmin').directive('mediaPanel', function ($mdDialog, PresentationService, FileService) {
         return {
             restrict: 'E',
-            templateUrl: '/modules/admin/partials/mediaPanel.html',
+            templateUrl: './modules/admin/partials/mediaPanel.html',
             scope: true,
             link: function (scope) {
                 scope.event = scope.$root.event;

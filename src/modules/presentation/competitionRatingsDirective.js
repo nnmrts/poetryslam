@@ -3,7 +3,7 @@
     angular.module('ps.presentation').directive('competitionRatings', function ($timeout) {
         return {
             restrict: 'E',
-            templateUrl: '/modules/presentation/partials/competitionRatings.html',
+            templateUrl: './modules/presentation/partials/competitionRatings.html',
             controller: function ($scope) {
                 $scope.isWinnerRowVisible = function (index) {
                     var number = $scope.presentation.winnerList.length - index;

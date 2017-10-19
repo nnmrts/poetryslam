@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     font-family: "Roboto", "Helvetica", serif;
     margin: 0;
     padding: 0;
@@ -30,8 +31,8 @@ html, body {
 .screen-container {
     position: relative;
     width: 100vw;
-    height: 75vw;
-    background: url('/media/clips/bg.png') no-repeat;
+    height: 100vh;
+    background: url('./media/clips/bg.png') no-repeat;
     background-size: cover;
 }
 
@@ -109,9 +110,8 @@ html, body {
 .overlay-subline {
     margin-top: 0.5vw;
     font-size: 4vh;
-    font-family: Georgia;
-    text-shadow: -1px 1px 3px #000, -2px 2px 3px #000, -3px 3px 3px #000, -4px 4px 3px #000, -5px 5px 3px #000, -6px 6px 3px #000, -7px 7px 3px #000, -8px 8px 3px #000, -9px 9px 3px #000, -10px 10px 3px #000;
 }
+
 
 /** PARTICIPANT **/
 
@@ -121,18 +121,15 @@ html, body {
         -webkit-transform: translate3d(-2000px, -15vh, 0);
         font-size: 8vh;
     }
-
     30% {
         opacity: 1;
         transform: translate3d(0, -15vh, 0);
         font-size: 8vh;
     }
-
     80% {
         transform: translate3d(0, -15vh, 0);
         font-size: 8vh;
     }
-
     100% {
         transform: none;
     }
@@ -239,8 +236,7 @@ html, body {
     align-items: center;
 }
 
-.scores li figure.front {
-}
+.scores li figure.front {}
 
 .scores li figure.back {
     transform: rotateY(180deg);
@@ -260,6 +256,7 @@ odometer {
     min-height: 20vh;
     font-size: 15vh;
 }
+
 
 /** PARTICIPANT LIST **/
 
@@ -340,7 +337,9 @@ odometer {
     display: none !important;
 }
 
+
 /** TODO we need a configuration option for the user to disable the second row in participant lists **/
+
 .participant-list-name {
     font-size: 3.5vh;
     line-height: 4.5vh;

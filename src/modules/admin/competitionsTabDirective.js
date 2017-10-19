@@ -4,7 +4,7 @@
         return {
             restrict: 'E',
             scope: false,
-            templateUrl: '/modules/admin/partials/competitionsTab.html',
+            templateUrl: './modules/admin/partials/competitionsTab.html',
             controller: function($scope, $rootScope) {
               $scope.competitionIsSelected = function(competition) {
                 if(competition.id == $rootScope.event.view.competitionId) {

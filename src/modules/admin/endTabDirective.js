@@ -4,7 +4,7 @@
         return {
             restrict: 'E',
             scope: false,
-            templateUrl: '/modules/admin/partials/endTab.html'
+            templateUrl: './modules/admin/partials/endTab.html'
         }
     });
 })();

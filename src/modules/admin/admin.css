@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -7,7 +8,9 @@ html, body {
     cursor: pointer;
 }
 
+
 /* Sidenav area */
+
 .sidebar-logo {
     max-width: 100%;
     max-height: 180px;
@@ -41,10 +44,13 @@ sidenav-entry {
     left: 0;
     bottom: 0;
     width: 400px;
-    height: 300px;
+    height: 225px;
+    box-sizing: border-box;
 }
 
+
 /* Primary content area */
+
 .content-container {
     padding: 2rem;
 }
@@ -52,6 +58,7 @@ sidenav-entry {
 .admin-section {
     margin-bottom: 2rem;
 }
+
 
 /* Other?! */
 
@@ -70,24 +77,26 @@ md-icon.avatar {
     margin-top: 10px;
 }
 
-.md-button.contact > md-icon {
+.md-button.contact>md-icon {
     fill: black;
     width: 36px;
     height: 36px;
 }
 
-.md-button.contact:active > md-icon {
+.md-button.contact:active>md-icon {
     background-color: #dadada;
     border-radius: 75%;
     padding: 4px;
     transition: all 100ms ease-out 30ms;
 }
 
+
 /* Utils */
 
 .text-left {
     text-align: left;
 }
+
 
 /* Typography support coming in 0.8.0 */
 
@@ -101,7 +110,6 @@ md-icon.avatar {
     overflow: hidden;
     margin: 0px;
     vertical-align: middle;
-
 }
 
 md-bottom-sheet md-icon {
@@ -123,12 +131,14 @@ span.name {
     width: 100%;
 }
 
+
 /* Other?! */
 
-md-list-item > button {
+md-list-item>button {
     width: 100%;
     text-align: left !important;
-    height: 70px;;
+    height: 70px;
+    ;
 }
 
 md-icon.avatar {
@@ -147,7 +157,7 @@ button#main {
     margin-bottom: 10px;
 }
 
-md-sidenav > md-toolbar {
+md-sidenav>md-toolbar {
     height: 64px;
 }
 
@@ -156,9 +166,12 @@ md-sidenav > md-toolbar {
     color: gray;
 }
 
+
 /* Styling for the sound pad */
 
+
 /* Lists */
+
 md-list-item {
     overflow: hidden;
 }
