@@ -1,42 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" manifest="app.manifest">
-<head>
-    <base href="/"/>
-    <meta charset="UTF-8">
-    <title>Poetry Slam Admin</title>
-    <link rel="stylesheet" href="fonts/SourceSansPro-Black.css"/>
-    <link rel="stylesheet" href="fonts/SourceSansPro-Light.css"/>
-    <link rel="stylesheet" href="admin.min.css"/>
+<html lang="en">
 
-    <script src="admin.min.js"></script>
-</head>
-<body layout="row" ng-app="psadmin">
-<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="true">
-    <a href="admin.html#/"><img src="/media/logo/logo-compact.png" class="sidebar-logo"/></a>
+	<head>
+		<meta charset="UTF-8">
+		<title>Poetry Slam Admin</title>
+		<link rel="stylesheet" href="./fonts/SourceSansPro-Black.css" />
+		<link rel="stylesheet" href="./fonts/SourceSansPro-Light.css" />
+		
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material-data-table/0.10.10/md-data-table.min.css" />
+		<link rel="stylesheet" href="admin.min.css"/>
 
-    <md-content class="sidenav-menu">
-        <sidenav-entry path="'/'" label="'Status'"></sidenav-entry>
-        <sidenav-entry path="'/presentation'" label="'Präsentation'"></sidenav-entry>
-        <sidenav-entry path="'/participants'" label="'Poeten'"></sidenav-entry>
-        <sidenav-entry path="'/competitions'" label="'Wettbewerbe'"></sidenav-entry>
-        <div layout="column" class="sidenav-sublevel">
-            <div layout="column" ng-repeat="competition in event.competitions">
-                <sidenav-entry path="'/competitions/' + competition.id + '/groups'"
-                               label="competition.name"></sidenav-entry>
-                <div layout="column" class="sidenav-sublevel" ng-show="competition.groups">
-                    <sidenav-entry ng-repeat="group in competition.groups"
-                                   path="'/competitions/' + competition.id + '/groups/' + group.id"
-                                   label="group.name"></sidenav-entry>
-                </div>
-            </div>
-        </div>
-    </md-content>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
 
-    <iframe src="/index.html" class="preview-frame"></iframe>
-</md-sidenav>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-aria.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.9/angular-material.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-messages.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-sortable/1.3.8/ng-sortable.min.js"></script>
+		<script src="https://raw.githubusercontent.com/alferov/angular-file-saver/master/dist/angular-file-saver.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload-shim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-data-table/0.10.10/md-data-table.min.js"></script>
 
-<md-content flex class="md-whiteframe-z2">
-    <section class="content-container" ng-view></section>
-</md-content>
-</body>
+		<script src="admin.min.js"></script>
+	</head>
+
+	<body layout="row" ng-app="psadmin">
+		<background-audio audio-shortcuts></background-audio>
+
+		<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="true">
+			<a href="admin.html#/">
+				<img src="./media/logo/logo.png" class="sidebar-logo" />
+			</a>
+
+			<md-content class="sidenav-menu">
+				<sidenav-entry path="'/'" label="'Status'"></sidenav-entry>
+				<sidenav-entry path="'/presentation'" label="'Präsentation'"></sidenav-entry>
+				<sidenav-entry path="'/participants'" label="'Poeten'"></sidenav-entry>
+				<sidenav-entry path="'/competitions'" label="'Wettbewerbe'"></sidenav-entry>
+				<div layout="column" class="sidenav-sublevel">
+					<div layout="column" ng-repeat="competition in event.competitions">
+						<sidenav-entry path="'/competitions/' + competition.id + '/groups'" label="competition.name"></sidenav-entry>
+						<div layout="column" class="sidenav-sublevel" ng-show="competition.groups">
+							<sidenav-entry ng-repeat="group in competition.groups" path="'/competitions/' + competition.id + '/groups/' + group.id" label="group.name"></sidenav-entry>
+						</div>
+					</div>
+				</div>
+				<sidenav-entry path="'/videos'" label="'Videos'"></sidenav-entry>
+				<sidenav-entry path="'/sounds'" label="'Sounds'"></sidenav-entry>
+				<sidenav-entry path="'/AdmistrationInterface'" label="'Administration'"></sidenav-entry>
+			</md-content>
+
+			<iframe src="./index.html?embedded=1" class="preview-frame"></iframe>
+		</md-sidenav>
+
+		<md-content flex class="md-whiteframe-z2">
+			<section class="content-container" ng-view></section>
+		</md-content>
+	</body>
+
 </html>
