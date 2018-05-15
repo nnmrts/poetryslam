@@ -8,7 +8,7 @@
     </md-toolbar>
 
     <md-content class="md-padding">
-        <md-list ng-sortable>
+        <md-list as-sortable>
             <md-list-item ng-repeat="sound in event.sounds">
                 <p>{{ sound.name }} <small class="shortcut-info" ng-show="$index <= 8">[Strg + {{$index + 1}}] </small></p>
             </md-list-item>

@@ -34,7 +34,7 @@
             </div>
         </md-list-item>
     </md-list>
-    <md-list ng-sortable style="padding-top: 0">
+    <md-list as-sortable style="padding-top: 0">
         <md-list-item class="md-2-line md-no-proxy" ng-repeat="participant in group.participants">
             <div class="md-list-item-text" layout="column">
                 <h3>{{ (participant.id | participantOfId).name }}</h3>
